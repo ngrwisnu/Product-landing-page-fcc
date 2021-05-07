@@ -1,0 +1,378 @@
+/* Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+	scroll-behavior: smooth;
+}
+
+
+img {
+	width: 100%;
+}
+
+body {
+	background-color: #ddd;
+	font-size: 16px;
+	font-family: 'Poppins', Montserrat, Roboto, sans-serif;
+	margin: 50px;
+}
+
+.container {
+	display: grid;
+	gap: 10px;
+
+}
+
+/* .header h2 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 40px;
+} */
+
+.header img {
+	width: 54px;
+}
+
+.header {
+	display: grid;
+	grid-template-areas: 
+	'hero hero feature-1'
+	'hero hero feature-2';
+
+}
+
+#nav-bar {
+	position: fixed;
+	width: 100%;
+	top: 0;
+}
+
+.hero {
+	position: relative;
+	grid-area: hero;
+	min-height: 300px;
+	background-image: url(img/full/img1.png);
+	background-size: cover;
+	background-position: center;
+	padding: 50px;
+}
+
+
+.hero > * {
+	display: none;
+}
+
+.features {
+	position: relative;
+	background-color: black;
+	color: white;
+	display: grid;
+	justify-content: center; /*alternatif : place-content: center; */
+	align-content: center;
+	text-align: center;
+	cursor: pointer;
+}
+
+.feature-1 {
+	height: 200px;
+	grid-area: feature-1;
+	background-image: url(img/full/img3.png);
+	background-size: cover;
+	background-position: center;
+}
+
+.feature-2 {
+	height: 200px;
+	grid-area: feature-2;
+	background-image: url(img/full/img2.png);
+	background-size: cover;
+	background-position: center;
+}
+
+.features .price {
+	font-size: 1.5em;
+}
+
+.menu {
+	order: -1;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	align-items: center;
+	
+}
+
+.menu .brand {
+	color: wheat;
+}
+
+.menu .brand h1 {
+	font-size: 32px;
+	color: rgb(92, 14, 92);
+}
+
+.menu ul {
+	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	gap: 5px;
+}
+
+.menu a {
+	display: block;
+	/* background-color: rgb(250, 239, 217); */
+	color: rgb(246, 125, 246);
+	text-decoration: none;
+	text-align: center;
+	padding: 8px;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 20px;
+	position: relative;
+	z-index: 99;
+}
+
+.menu-toggle span {
+	display: block;
+	width: 28px;
+	height: 3px;
+	background: rgb(246, 125, 246);
+	border-radius: 3px;
+	transition: all 500ms;
+}
+
+.menu-toggle input {
+	display: block;
+	position: absolute;
+	background-color: black;
+	width: 40px;
+	height: 28px;
+	left: -5px;
+	top: -5px;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 2;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+	transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+	transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+	background-color: rgb(173, 0, 173);
+	transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+	background-color: rgb(173, 0, 173);
+	transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+	opacity: 0;
+	transform: scale(0);
+}
+
+/* Services */
+.services {
+	margin-top: 50px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 20px;
+}
+
+.service {
+	padding: 15px;
+	
+	text-align: center;
+}
+
+.service .icon {
+	font-size: 3em;
+	margin-bottom: 10px;
+}
+
+.service h3 {
+	font-size: 1.5em;
+	margin-bottom: 10px;
+}
+
+.service p {
+	letter-spacing: 1px;
+}
+
+/* Gallery */
+.gallery {
+	margin-top: 50px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 24px;
+}
+
+.gallery h2 {
+	grid-column-start: 1;
+	grid-column-end: -1;
+	font-size: 24px;
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.contact input {
+	display: block;
+	margin: auto;
+}
+
+.contact input[type='email'] {
+	width: 500px;
+	padding: 10px;
+	font-size: 20px;
+	border-radius: 5px;
+}
+
+.contact input[type='submit'] {
+	margin: 10px auto;
+	width: 200px;
+	height: 48px;
+	border: none;
+	border-radius: 5px;
+	background-color: rgb(10, 156, 10);
+}
+
+/* Responsive breakpoints */
+@media  (max-width: 1024px) {
+	.menu {
+		order: inherit;
+		grid-template-columns: 1fr;
+	}
+
+	.menu .brand {
+		display: none;
+	}
+
+	.hero > * {
+		display: block;
+		/* background-color: black; */
+		color: wheat;
+		padding: 10px;
+		margin-bottom: 5px;
+	}
+
+	.hero {
+		display: flex;
+		align-items: center;
+	}
+}
+
+@media  (max-width: 768px) {
+	.menu {
+		order: -1;
+		justify-items: end;
+	}
+	.menu-toggle {
+		display: flex;
+	}
+
+	.menu ul {
+		display: flex;
+		position: absolute;
+		right: 0;
+		height: 100vh;
+		top: 0;
+		background-color: rgb(70, 5, 70);
+		width: 80%;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		z-index: 1;
+		transform: translateY(-100%);
+		opacity: 0;
+		transition: all 1s;
+	}
+
+	.menu ul.slide {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	
+}
+
+@media  (max-width: 600px) {
+	.header {
+		grid-template-areas: 
+		'hero'
+		'feature-1'
+		'feature-2';
+	}
+	
+}
+
+
+
+
+
+
+/* Clear Fix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}

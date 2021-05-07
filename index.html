@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap" rel="stylesheet">
+
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="home">
+    
+    <div class="container" id="header">
+        <header class="header">
+            <img src="img/beach-umbrella.svg" alt="logo" id="header-img">
+            
+            <div class="hero">
+                <!-- <h2 class="heading">Paradise Resort</h2>                 -->
+            </div>
+            
+            <div class="features feature-1">
+                <h4 class="price">USD 4000</h4>
+                <p class="item">Resort</p>
+                
+            </div>
+
+            <div class="features feature-2">
+                <h4 class="price">USD 1000</h4>
+                <p class="item">Real Estate</p>                
+            </div>
+        </header>
+
+        
+
+        <nav class="menu" id="nav-bar">
+            <div class="menu-toggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="brand">
+                <h1>Paradise</h1>
+            </div>
+
+            <ul class="menu-list">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <!-- <li><a href="" class="nav-link">About</a></li> -->
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+            </ul>
+
+        </nav>
+        <section class="services" id="services">
+            <div class="service">
+                <div class="icon">🎪</div>
+                <h3>Beach</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, facere.</p>
+
+            </div>
+
+            <div class="service">
+                <div class="icon">🎧</div>
+                <h3>Relaxation</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                
+            </div>
+
+            <div class="service">
+                <div class="icon">🥑</div>
+                <h3>Health Restaurant</h3>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                
+            </div>
+
+            <div class="service">
+                <div class="icon">🛒</div>
+                <h3>Shopping Mart</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, facere.</p>
+                
+            </div>
+        </section>
+
+        <section class="gallery" id="gallery">
+            <h2>Gallery</h2>
+            <img src="https://source.unsplash.com/random/201x201" alt="">
+            <img src="https://source.unsplash.com/random/202x202" alt="">
+            <img src="https://source.unsplash.com/random/203x203" alt="">
+            <img src="https://source.unsplash.com/random/204x204" alt="">
+            <img src="https://source.unsplash.com/random/205x205" alt="">
+            <img src="https://source.unsplash.com/random/206x206" alt="">
+            <img src="https://source.unsplash.com/random/207x207" alt="">
+            
+        </section>
+
+        <section>
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/p77BsTTRKz8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+
+        <section class="contact">
+            <form action="https://www.freecodecamp.com/email-submit" id="form">
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+                <input type="submit" id="submit">
+            </form>
+        </section>
+    </div>
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', function() {
+        nav.classList.toggle('slide');
+    });
+</script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
